@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local fixtures
     'ecommerce.dashboard.apps.DashboardConfig',
+    'ecommerce.inventory.apps.InventoryConfig',
 ]
 
 MIDDLEWARE = [
