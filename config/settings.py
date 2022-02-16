@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # Local fixtures
     'ecommerce.dashboard.apps.DashboardConfig',
     'ecommerce.inventory.apps.InventoryConfig',
+    'ecommerce.demo.apps.DemoConfig',
     # External Application
     'mptt',
 ]
