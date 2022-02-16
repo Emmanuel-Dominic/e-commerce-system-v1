@@ -16,14 +16,13 @@ def test_inventory_category_dbfixture(db, db_fixture_setup, id, name, slug, is_a
     assert result.slug == slug
     assert result.is_active == is_active
 
-@pytest.mark.parametrize("name, slug, is_active", [
-    ("fashion", "fashion", 1),
-    ("trainers", "trainers", 1),
-    ("baseball", "baseball", 1)
+@pytest.mark.parametrize("slug, is_active", [
+    ("fashion", 1),
+    ("trainers", 1),
+    ("baseball", 1)
     ]
 )
-def test_inventory_category_dbfixture(db, category_factory, name, slug, is_active):
-    result = category_factory.create(name=name, slug=slug, is_active=is_active)
-    assert result.name == name
+def test_inventory_category_dbfixture(db, category_factory, slug, is_active):
+    result = category_factory.create(slug=slug, is_active=is_active)
     assert result.slug == slug
     assert result.is_active == is_active
